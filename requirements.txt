@@ -1,0 +1,5 @@
+flask
+werkzeug
+python-docx
+pdfkit
+PyPDF2

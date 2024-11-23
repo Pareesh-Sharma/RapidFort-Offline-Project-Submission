@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doc-to-pdf
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: doc-to-pdf
+  template:
+    metadata:
+      labels:
+        app: doc-to-pdf
+    spec:
+      containers:
+      - name: doc-to-pdf
+        image: doc-to-pdf:latest
+        ports:
+        - containerPort: 5000
